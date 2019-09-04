@@ -1,0 +1,145 @@
+html, body {
+  height: 100%;
+}
+
+.game-area {
+  display: grid;
+  grid-template-areas:
+    "captured-white"
+    "board         "
+    "captured-black";
+}
+
+.left {
+  grid-area: left;
+}
+
+.right {
+  grid-area: right;
+}
+
+.board {
+  grid-area: board;
+  border: solid black 1px;
+  box-sizing: border-box;
+  margin: 0;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+}
+
+.board-row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  padding: 0;
+  margin: 0;
+}
+
+.captured-white {
+  grid-area: captured-white;
+}
+
+.captured-black {
+  grid-area: captured-black;
+}
+
+.captured-figures {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  padding: 0;
+  margin: 0;
+}
+
+.captured-figure {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+}
+
+.field {
+  list-style-type: none;
+  border: solid black 1px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.field-black {
+  background-color: brown;
+}
+
+.field-white {
+  background-color: burlywood;
+}
+
+.figure {
+  position: absolute;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.figure-selected {
+  background-color: lightblue;
+}
+
+.figure-rotate {
+  transform: rotate(180deg);
+}
+
+.king-black {
+  background-image: url("./svg/kingBlack.svg");
+}
+
+.queen-black {
+  background-image: url("./svg/queenBlack.svg");
+}
+
+.rook-black {
+  background-image: url("./svg/rookBlack.svg");
+}
+
+.bishop-black {
+  background-image: url("./svg/bishopBlack.svg");
+}
+
+.knight-black {
+  background-image: url("./svg/knightBlack.svg");
+}
+
+.pawn-black {
+  background-image: url("./svg/pawnBlack.svg");
+}
+
+.king-white {
+  background-image: url("./svg/kingWhite.svg");
+}
+
+.queen-white {
+  background-image: url("./svg/queenWhite.svg");
+}
+
+.rook-white {
+  background-image: url("./svg/rookWhite.svg");
+}
+
+.bishop-white {
+  background-image: url("./svg/bishopWhite.svg");
+}
+
+.knight-white {
+  background-image: url("./svg/knightWhite.svg");
+}
+
+.pawn-white {
+  background-image: url("./svg/pawnWhite.svg");
+}
+
+.king-chess {
+  background-color: red;
+}
+
+.green-circle {
+  background-image: url("./svg/green-circle.svg");
+  background-size: 30%;
+}
